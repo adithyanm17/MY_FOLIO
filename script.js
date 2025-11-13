@@ -5,18 +5,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     
     // Toggle mobile menu
-    menuToggle.addEventListener('click', function() {
+    function toggleMenu() {
         menuToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
+    }
+    
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMenu();
     });
     
     // Close mobile menu when clicking a link
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.classList.remove('no-scroll');
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 992) { // Only for mobile
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // Close menu
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+                
+                // Smooth scroll to section
+                if (targetSection) {
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }, 300);
+                }
+            }
         });
     });
     
@@ -28,6 +50,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('no-scroll');
         }
     });
+    
+    // Close menu when window is resized to desktop
+    function handleResize() {
+        if (window.innerWidth > 992) {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        }
+    }
+    
+    window.addEventListener('resize', handleResize);
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
