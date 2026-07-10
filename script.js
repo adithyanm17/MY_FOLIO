@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateActiveNavLink();
     });
     
-    // Initialize scroll animations
+    // Initialize smooth scroll animations
     const initScrollAnimations = function() {
         const elements = document.querySelectorAll('.timeline-item, .experience-item, .project-card, .certification-list li, .achievement-list li');
         
@@ -120,15 +120,17 @@ document.addEventListener('DOMContentLoaded', function() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
         
-        elements.forEach(element => {
+        elements.forEach((element, index) => {
             element.style.opacity = '0';
-            element.style.transform = 'translateY(20px)';
-            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            element.style.transform = 'translateY(30px) scale(0.95)';
+            // Add slight staggering based on DOM order for a more organic feel
+            const delay = (index % 5) * 0.1;
+            element.style.transition = `opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) ${delay}s, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) ${delay}s`;
             observer.observe(element);
         });
     };
@@ -160,33 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize active link on page load
     updateActiveNavLink();
 
-    // Add animation to elements when they come into view
-    const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.timeline-item, .experience-item, .project-card, .certification-list li, .achievement-list li');
-        
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (elementPosition < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
 
-    // Set initial styles for animation
-    document.querySelectorAll('.timeline-item, .experience-item, .project-card, .certification-list li, .achievement-list li').forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-
-    // Run animation on scroll
-    window.addEventListener('scroll', animateOnScroll);
-    
-    // Run once on page load
-    animateOnScroll();
 
     // Form submission handling (if you add a contact form later)
     const contactForm = document.getElementById('contact-form');
@@ -204,5 +180,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearElement = document.querySelector('.copyright');
     if (yearElement) {
         yearElement.textContent = `© ${currentYear} Adithyan M. All rights reserved.`;
+    }
+
+    // Setup Jumping Letters for Name
+    function setupJumpingLetters(selector) {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(el => {
+            const text = el.textContent;
+            el.textContent = '';
+            for (let char of text) {
+                const span = document.createElement('span');
+                if (char === ' ') {
+                    span.innerHTML = '&nbsp;';
+                } else {
+                    span.textContent = char;
+                }
+                span.className = 'jumping-letter';
+                el.appendChild(span);
+            }
+        });
+    }
+    setupJumpingLetters('.nav-logo, .hero h1');
+
+    // Horizontal Timeline Progress
+    const timeline = document.querySelector('.timeline');
+    if (timeline) {
+        const progress = document.createElement('div');
+        progress.className = 'timeline-progress';
+        timeline.prepend(progress);
+        
+        const timelineObserver = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting) {
+                progress.style.width = '100%';
+            }
+        }, {threshold: 0.2});
+        timelineObserver.observe(timeline);
     }
 });
