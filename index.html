@@ -2,243 +2,359 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0f0c29">
-    <meta name="description" content="Portfolio of Adithyan M - Full Stack Developer">
-    <title>Adithyan M - Full Stack Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f2f2">
+    <meta name="description" content="Adithyan M — Application Development Engineer building full-stack web apps, ERP modules, and interfaces that bridge software with embedded hardware.">
+    <title>Adithyan M — Application Development Engineer</title>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23201e1d'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='17' fill='%23ec3013' text-anchor='middle'%3EAM%3C/text%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Marks that JS is alive, so reveal animations only hide content they can un-hide. -->
+    <script>document.documentElement.className += ' js';</script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#home" class="nav-logo">Adithyan M</a>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="Adithyan%20M.pdf" download class="btn btn-primary" style="padding: 0.4rem 1.2rem; font-size: 0.9rem; margin-left: 10px;">Resume <i class="fas fa-download" style="margin-left: 5px;"></i></a></li>
-            </ul>
+
+<!-- Icon sprite: 24x24, stroke-based, inherits currentColor. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v2"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-3.9a3.4 3.4 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91.65S17.73.35 15 2.19a13.38 13.38 0 0 0-7 0C5.27.35 4.09.65 4.09.65A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.72c0 5.42 3.3 6.61 6.44 7A3.4 3.4 0 0 0 8 18.13V22"/><path d="M9 20c-3 .6-3-1.5-6-2"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-git-branch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+    <symbol id="i-code-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></symbol>
+    <symbol id="i-circle-dot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/></symbol>
+    <symbol id="i-pen-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3Z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5Z"/><path d="m2 2 7.59 7.59"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></symbol>
+    <symbol id="i-atom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M6 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Z"/><path d="M17 9h1a3 3 0 0 1 0 6h-1"/></symbol>
+    <symbol id="i-message-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-file-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h6"/><path d="M8 13h8"/><path d="M8 17h8"/></symbol>
+    <symbol id="i-list-checks" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2"/><path d="M15 2v2"/><path d="M9 20v2"/><path d="M15 20v2"/><path d="M2 9h2"/><path d="M2 15h2"/><path d="M20 9h2"/><path d="M20 15h2"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.86a10 10 0 0 1 14 0"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></symbol>
+    <symbol id="i-circuit-board" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M11 9h4a2 2 0 0 0 2-2V3"/><circle cx="9" cy="9" r="2"/><path d="M7 21v-4a2 2 0 0 1 2-2h4"/><circle cx="15" cy="15" r="2"/></symbol>
+</svg>
+
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+<header class="nav">
+    <div class="nav-inner">
+        <a href="#home" class="nav-brand">Adithyan M</a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="Adithyan%20M.pdf" download class="btn btn-primary nav-resume">Resume</a>
         </nav>
-    </header>
+    </div>
+</header>
+
+<main>
 
     <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Adithyan M</h1>
-            <p class="tagline">Full Stack Developer</p>
-            <div class="social-links">
-                <a href="mailto:adithyanm45@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/adithyan-m-a12174229" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/adithyanm17" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            </div>
+        <div class="hero-badge">
+            <span class="hero-dot"></span>
+            <span class="hero-status">Available for work</span>
         </div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
+        <h1 class="hero-title">Adithyan M</h1>
+        <p class="hero-sub">Application Development Engineer building full-stack web apps, ERP modules, and interfaces that bridge software with embedded hardware.</p>
+        <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View projects</a>
+            <a href="Adithyan%20M.pdf" download class="btn btn-ghost">
+                <svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg>
+                Download résumé
+            </a>
+        </div>
+        <div class="hero-social">
+            <a href="mailto:adithyanm45@gmail.com" class="social-btn" aria-label="Email">
+                <svg class="icon icon-md" aria-hidden="true"><use href="#i-mail"></use></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/adithyan-m-a12174229" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                <svg class="icon icon-md" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+            </a>
+            <a href="https://github.com/adithyanm17" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                <svg class="icon icon-md" aria-hidden="true"><use href="#i-github"></use></svg>
+            </a>
+        </div>
     </section>
+
+    <hr class="rule">
 
     <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="photo-placeholder">
-                        <img src="Adithyan.jpg" alt="Your Photo" class="profile-photo">
-                    </div>
-                </div> 
-                <div class="about-text">
-                    <p>Application Development Engineer with hands-on experience in building software, ERP modules, and full-stack web applications. Skilled in Python, React, and UI/UX design using Figma. Experienced in integrating software with embedded hardware systems and delivering end-to-end solutions with a strong focus on usability and documentation.</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> adithyanm45@gmail.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
-                    </div>
+        <div class="about-grid" data-reveal>
+            <figure class="about-figure">
+                <img src="Adithyan.jpg" alt="Portrait of Adithyan M" width="560" height="560">
+            </figure>
+            <div>
+                <span class="eyebrow">About</span>
+                <h2 class="section-title">Building software that meets hardware halfway.</h2>
+                <p class="lede">Application Development Engineer with hands-on experience building software, ERP modules, and full-stack web applications. Skilled in Python, React, and UI/UX design using Figma — experienced in integrating software with embedded hardware systems and delivering end-to-end solutions with a strong focus on usability and documentation.</p>
+                <div class="about-meta">
+                    <a href="mailto:adithyanm45@gmail.com" class="meta-item meta-link">
+                        <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                        adithyanm45@gmail.com
+                    </a>
+                    <span class="meta-item">
+                        <svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+                        Bengaluru, India
+                    </span>
                 </div>
             </div>
         </div>
     </section>
+
+    <hr class="rule">
 
     <section id="skills" class="section">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Software/Tools</h4>
-                    <div class="skill-tags">
-                        <span>Spring</span>
-                        <span>Git</span>
-                        <span>GitHub</span>
-                        <span>Eclipse</span>
-                        <span>SQL</span>
-                        <span>VS code</span>
-                        <span>Microsoft Excel</span>
-                        <span>Figma</span>
-                        <span>Windsurf (cascade AI)</span>
-                        <span>Claude code</span>
+        <span class="eyebrow">Skills</span>
+        <h2 class="section-title">What I work with</h2>
+        <div class="skills-grid">
+            <div class="skill-group" data-reveal>
+                <h3 class="skill-heading">Software / Tools</h3>
+                <div class="tag-row">
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg>Spring</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-git-branch"></use></svg>Git</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-code-2"></use></svg>GitHub</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-circle-dot"></use></svg>Eclipse</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-database"></use></svg>SQL</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-code-2"></use></svg>VS Code</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-table"></use></svg>Excel</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-pen-tool"></use></svg>Figma</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-wind"></use></svg>Windsurf</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-terminal"></use></svg>Claude Code</span>
+                </div>
+            </div>
+            <div class="skill-group" data-reveal style="--reveal-delay:90ms">
+                <h3 class="skill-heading">Web Development</h3>
+                <div class="tag-row">
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-atom"></use></svg>React</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg>Spring Boot</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg>HTML/CSS</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-layout"></use></svg>Bootstrap</span>
+                </div>
+            </div>
+            <div class="skill-group" data-reveal style="--reveal-delay:180ms">
+                <h3 class="skill-heading">Programming Languages</h3>
+                <div class="tag-row">
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-code-2"></use></svg>Python</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-coffee"></use></svg>Java</span>
+                </div>
+            </div>
+            <div class="skill-group" data-reveal>
+                <h3 class="skill-heading">Soft Skills</h3>
+                <div class="tag-row">
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-message-circle"></use></svg>Communication</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>Time management</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-file-text"></use></svg>Documentation</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-list-checks"></use></svg>Planning &amp; organizing</span>
+                </div>
+            </div>
+            <div class="skill-group" data-reveal style="--reveal-delay:90ms">
+                <h3 class="skill-heading">Embedded &amp; Hardware</h3>
+                <div class="tag-row">
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-cpu"></use></svg>Arduino</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-wifi"></use></svg>ESP32</span>
+                    <span class="tag"><svg class="icon" aria-hidden="true"><use href="#i-circuit-board"></use></svg>KiCAD / PCB design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="rule">
+
+    <section id="education" class="section band">
+        <div class="band-inner">
+            <span class="eyebrow">Education</span>
+            <h2 class="section-title">Where it started</h2>
+            <div class="edu-list">
+                <div class="edu-row" data-reveal>
+                    <p class="edu-duration">2020 — 2024</p>
+                    <div>
+                        <h3 class="edu-degree">Bachelor in Engineering (Electronics and Communication)</h3>
+                        <p class="edu-institution">College of Engineering, Chengannur</p>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h4>Web Development</h4>
-                    <div class="skill-tags">
-                        <span>Full-stack development (React Js, Spring Boot)</span>
+                <div class="edu-row" data-reveal style="--reveal-delay:90ms">
+                    <p class="edu-duration">2019 — 2020</p>
+                    <div>
+                        <h3 class="edu-degree">Higher Secondary Education</h3>
+                        <p class="edu-institution">Vidyadhiraja Vidyapeetom, Mavelikara</p>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h4>Programming Languages</h4>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>Java</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4>Soft Skills</h4>
-                    <div class="skill-tags">
-                        <span>Communication</span>
-                        <span>Time management</span>
-                        <span>Documentation</span>
-                        <span>Planning & Organizing</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4>Embedded and Hardware</h4>
-                    <div class="skill-tags">
-                        <span>Arduino</span>
-                        <span>ESP32</span>
-                        <span>Circuit and PCB design (KiCAD)</span>
+                <div class="edu-row" data-reveal style="--reveal-delay:180ms">
+                    <p class="edu-duration">2017 — 2018</p>
+                    <div>
+                        <h3 class="edu-degree">High School</h3>
+                        <p class="edu-institution">Vidyadhiraja Vidyapeetom, Mavelikara</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section bg-light">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Bachelor in Engineering (Electronics and Communication)</h3>
-                        <p class="institution">College of Engineering, Chengannur</p>
-                        <p class="duration">2020 - 2024</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Higher Secondary Education</h3>
-                        <p class="institution">Vidyadhiraja Vidyapeetom, Mavelikara</p>
-                        <p class="duration">2019 - 2020</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>High School</h3>
-                        <p class="institution">Vidyadhiraja Vidyapeetom, Mavelikara</p>
-                        <p class="duration">2017 - 2018</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <hr class="rule">
 
     <section id="experience" class="section">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <h3>Engineer Application Development</h3>
-                <p class="company">EDAC MULTITECH PVT LTD | NOVEMBER 2024-PRESENT</p>
-                <ul class="responsibilities">
-                    <li>Designed and developed desktop GUI applications for real-time monitoring and control of high-power voltage regulator systems.</li>
-                    <li>Developed full-stack web applications using Spring Boot and React, including web interfaces hosted on microcontrollers for antenna signal transmission control and monitoring.</li>
-                    <li>Designed and implemented ERP modules covering Sales, Purchase, Manufacturing, Inventory, Quality, HR, and Invoicing, supporting end-to-end automated business operations.</li>
-                    <li>Developed inventory tracking solutions with RFID integration for real-time material traceability and production workflow monitoring.</li>
-                    <li>Integrated embedded hardware systems with enterprise software to enable seamless real-time data exchange and automation.</li>
-                    <li>Prepared project budget proposals, cost estimations, resource planning, and technical documentation for customer and internal development projects.</li>
-                    <li>Participated in client discussions, requirement analysis, solution design, testing, deployment, and end-to-end project delivery.</li>
-                    <li>Designed user interfaces and application workflows using Figma and developed responsive web interfaces with React, HTML, CSS, and Bootstrap.</li>
-                </ul>
+        <span class="eyebrow">Experience</span>
+        <h2 class="section-title">Where I've worked</h2>
+        <div class="exp-grid" data-reveal>
+            <div>
+                <h3 class="exp-role">Engineer, Application Development</h3>
+                <p class="exp-company">EDAC Multitech Pvt Ltd</p>
+                <p class="exp-dates">Nov 2024 — Present</p>
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Verilog Coding IDE</h3>
-                    <p>A desktop IDE for Verilog digital design, featuring code editing, simulation, waveform visualization, logic gate generation, and integrated AI coding assistance.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Gayathri Naturals Website</h3>
-                    <p>A website designed to showcase and promote Gayathri Naturals' organic and eco-friendly products.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Water Surface Cleaning Robot</h3>
-                    <p>A project under EPICs in IEEE SIGHT, in collaboration with the Kerala Government's Pampa Punarjani Project.</p>
-                </div>
-                <div class="project-card">
-                    <h3>EMG-Controlled Robotic Arm</h3>
-                    <p>Developed a system that recognizes real-time EMG signals to control a robotic arm using machine learning.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Automatic Indicator Turn-Off System</h3>
-                    <p>Designed an automatic indicator turn-off system for two-wheelers based on predefined conditions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certifications" class="section">
-        <div class="container">
-            <h2>Certifications</h2>
-            <ul class="certification-list">
-                <li>Digital Circuits - NPTEL</li>
-                <li>Java Programming - in28minutes (Udemy)</li>
-                <li>Java Web Service and REST API with Spring Boot - in28minutes (Udemy)</li>
+            <ul class="exp-list">
+                <li><span class="bullet"></span><p>Designed and developed desktop GUI applications for real-time monitoring and control of high-power voltage regulator systems.</p></li>
+                <li><span class="bullet"></span><p>Developed full-stack web applications using Spring Boot and React, including web interfaces hosted on microcontrollers for antenna signal transmission control and monitoring.</p></li>
+                <li><span class="bullet"></span><p>Designed and implemented ERP modules covering Sales, Purchase, Manufacturing, Inventory, Quality, HR and Invoicing, supporting end-to-end automated business operations.</p></li>
+                <li><span class="bullet"></span><p>Developed inventory tracking solutions with RFID integration for real-time material traceability and production workflow monitoring.</p></li>
+                <li><span class="bullet"></span><p>Integrated embedded hardware systems with enterprise software to enable seamless real-time data exchange and automation.</p></li>
+                <li><span class="bullet"></span><p>Prepared project budget proposals, cost estimations, resource planning, and technical documentation for customer and internal projects.</p></li>
+                <li><span class="bullet"></span><p>Participated in client discussions, requirement analysis, solution design, testing, deployment, and end-to-end project delivery.</p></li>
+                <li><span class="bullet"></span><p>Designed user interfaces and application workflows in Figma and developed responsive web interfaces with React, HTML, CSS and Bootstrap.</p></li>
             </ul>
         </div>
     </section>
 
-    <section id="achievements" class="section bg-light">
-        <div class="container">
-            <h2>Achievements</h2>
-            <ul class="achievement-list">
-                <li>Student project lead in EPICs IEEE water surface cleaning robot</li>
-                <li>NSS Volunteer Secretary [2022-23]</li>
-            </ul>
+    <hr class="rule">
+
+    <section id="projects" class="section">
+        <span class="eyebrow">Projects</span>
+        <h2 class="section-title">Selected work</h2>
+        <div class="projects-grid">
+            <article class="project-card" data-reveal>
+                <span class="proj-accent"></span>
+                <h3>Verilog Coding IDE</h3>
+                <p>A desktop IDE for Verilog digital design, with code editing, simulation, waveform visualization, logic gate generation, and integrated AI coding assistance.</p>
+            </article>
+            <article class="project-card" data-reveal style="--reveal-delay:90ms">
+                <span class="proj-accent"></span>
+                <h3>Gayathri Naturals Website</h3>
+                <p>A website designed to showcase and promote Gayathri Naturals' organic and eco-friendly products.</p>
+            </article>
+            <article class="project-card" data-reveal style="--reveal-delay:180ms">
+                <span class="proj-accent"></span>
+                <h3>Water Surface Cleaning Robot</h3>
+                <p>An EPICs in IEEE SIGHT project, in collaboration with the Kerala Government's Pampa Punarjani Project.</p>
+            </article>
+            <article class="project-card" data-reveal>
+                <span class="proj-accent"></span>
+                <h3>EMG-Controlled Robotic Arm</h3>
+                <p>A system that recognizes real-time EMG signals to control a robotic arm using machine learning.</p>
+            </article>
+            <article class="project-card" data-reveal style="--reveal-delay:90ms">
+                <span class="proj-accent"></span>
+                <h3>Automatic Indicator Turn-Off System</h3>
+                <p>An automatic indicator turn-off system for two-wheelers based on predefined conditions.</p>
+            </article>
         </div>
     </section>
 
-    <footer id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> adithyanm45@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/adithyan-m-a12174229" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/adithyanm17" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-            <p class="copyright">&copy; 2025 Adithyan M. All rights reserved.</p>
-        </div>
-    </footer>
+    <hr class="rule">
 
-    <script src="script.js"></script>
-    <script src="script.js" defer></script>
+    <section id="certifications" class="section band">
+        <div class="band-inner">
+            <div class="two-col">
+                <div data-reveal>
+                    <span class="eyebrow">Certifications</span>
+                    <ul class="marker-list">
+                        <li><span class="bullet"></span>Digital Circuits — NPTEL</li>
+                        <li><span class="bullet"></span>Java Programming — in28minutes (Udemy)</li>
+                        <li><span class="bullet"></span>Java Web Service and REST API with Spring Boot — in28minutes (Udemy)</li>
+                    </ul>
+                </div>
+                <div data-reveal style="--reveal-delay:80ms">
+                    <span class="eyebrow">Achievements</span>
+                    <ul class="marker-list">
+                        <li><span class="bullet"></span>Student project lead, EPICs IEEE water surface cleaning robot</li>
+                        <li><span class="bullet"></span>NSS Volunteer Secretary (2022–23)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact" data-reveal>
+        <div class="band-inner">
+            <div class="contact-grid">
+                <div>
+                    <h2 class="contact-title">Let's build something.</h2>
+                    <p class="contact-lede">Open to full-stack, ERP and hardware-integration work. Send a message below, or reach out directly.</p>
+                    <div class="contact-links">
+                        <a href="mailto:adithyanm45@gmail.com" class="btn btn-invert-ghost">
+                            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                            adithyanm45@gmail.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/adithyan-m-a12174229" target="_blank" rel="noopener noreferrer" class="btn btn-invert-ghost">
+                            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/adithyanm17" target="_blank" rel="noopener noreferrer" class="btn btn-invert-ghost">
+                            <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="field">
+                        <label for="cf-name">Name</label>
+                        <input class="input" id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-error">
+                        <p class="field-error" id="cf-name-error" hidden></p>
+                    </div>
+                    <div class="field">
+                        <label for="cf-email">Email</label>
+                        <input class="input" id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-error">
+                        <p class="field-error" id="cf-email-error" hidden></p>
+                    </div>
+                    <div class="field">
+                        <label for="cf-subject">Subject <span class="field-optional">(optional)</span></label>
+                        <input class="input" id="cf-subject" name="subject" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="cf-message">Message</label>
+                        <textarea class="input" id="cf-message" name="message" rows="5" required aria-describedby="cf-message-error"></textarea>
+                        <p class="field-error" id="cf-message-error" hidden></p>
+                    </div>
+                    <!-- Honeypot: bots fill it, humans never see it. -->
+                    <div class="hp" aria-hidden="true">
+                        <label for="cf-company">Company</label>
+                        <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-invert" id="cf-submit">
+                        <svg class="icon" aria-hidden="true"><use href="#i-send"></use></svg>
+                        Send message
+                    </button>
+                    <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Adithyan M. All rights reserved.</p>
+    <p>Bengaluru, India</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
